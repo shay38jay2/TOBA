@@ -1,0 +1,100 @@
+/* 
+    Created on : Mar 23, 2019, 6:00:22 PM
+    Author     : Shay
+*/
+
+body {background-color: #FF6666;
+	color: #FF9999;
+	font-family: Arial, Verdana, sans-serif; }
+
+* {box-sizing: border-box; }
+ 
+
+h1 {background-color: #FFFFCC;
+	color: #FF9999;
+	line-height: 200%;
+	font-family: Arial, Verdana, san-serif;
+	text-indent: 1em;
+	text-shadow: 3px 3px 5px #FF33FF; 
+	padding: 10px;
+	margin-bottom: 2em;
+	text-align: center;
+	display: block;}
+
+h2 {background-color: #FFFFCC;
+	color: #FF9999;
+	line-height: 200%;
+	font-family: Arial, Verdana, san-serif;
+	text-align: center;
+	padding: 10px;
+	margin-bottom: 2em;
+	display: block;}
+	
+
+nav { font-weight: bold;
+      word-spacing: 1em;
+      font-size: 1em; }
+
+nav a {font-weight: bold;
+	font-size: 1.25em;
+	word-spacing: .5em;
+	text-decoration: none; }
+
+ 
+p {font-size: .90em;
+   text-indent: 3em; 
+   display: block;}
+
+
+table {width: 600px;
+	margin: auto;
+	border: 1px solid #FFFFCC;
+	padding-top: 5px;}
+
+tr {border-bottom: 1px #FFFFCC dashed;
+	  padding-left: 25px;}
+
+
+a:link {color: #FFFFCC;}
+
+.button:link {color: #FFFFCC;}
+
+a:hover {text-decoration: none;
+	 color: #FF9999;
+	 background-color: #F7DEE1;}
+
+.button:hover {color: #FFFFCC;}
+
+.button {border-radius: 20px;
+	 padding: 1em;
+	 color: #FFFFFF;
+	 background-color: #FF0099;	
+	 font-family: Arial, sans-serif;
+	 font-weight: bold;	
+	 text-align: center;
+	 text-decoration: none;}
+	 
+
+nav   {flex: 1;}
+
+
+
+@media only screen and (max-width: 1024px){	 
+	nav {float: none; width: auto;}
+	}
+
+@media only screen and (max-width: 768px){
+	h1, h2, h3 {font-size: 100%;}
+	p {font-size: 90%;}
+	nav {padding: 0;}
+	nav a {display: block; padding: 0.5em 0;
+	       border-bottom: 2px ridge #FFFFCC; }
+	}
+	
+         
+
+
+
+
+
+

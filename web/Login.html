@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>User Login Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="color.css" rel="stylesheet">
+    </head>
+    <body>
+        
+        <h1>Welcome Customer To Our Online Services</h1>
+        <nav>
+            <a href="index.html">Home</a> &nbsp;
+            <a href="Login.html">Sign In Here</a> &nbsp;
+            <a href="New_customer.html">Join Us</a> &nbsp;
+            <a href="Success.html">Success</a> &nbsp;
+            <a href="Account_activity.html">Account Information</a> &nbsp;
+            <a href="Transaction.html">Post Transaction</a>
+        
+        </nav>
+        
+        <br>
+        <br>
+        <br>
+        
+        <form name="LogInUse">
+            
+             <table cellspacing="6" border="0">
+                <tr>
+                    <td align="center">User Name:</td>
+                    <td><input type="text" name="IdUsed"></td>                     
+                    
+                </tr>
+                
+                <tr>
+                    <td align="center">User Password:</td>
+                    <td><input type="text" name="PassUsed"></td>           
+                    
+                </tr>
+                
+                <tr>
+                    <td align="right"></td>
+                    <td><input type="submit" onclick="check(this.form)" value="Login Now"></td>
+                                        
+                </tr>                
+                
+            </table>
+            <h2>If You Are Not A Returning Customer?</h2>
+            
+        </form>        
+        
+        <script language="javascript">
+            //This function checks the authenticity of Password enetered and User Name and direct to 
+            //Account_activity.html page.
+            
+            function check(form){        
+ 
+                if(form.IdUsed.value == "jsmith@toba.com" && form.PassUsed.value == "letmein"){           
+                  response.sendRedirect ("Account_activity.html"); 
+                }
+                else
+                    response.sendRedirect("Login_failure.html");
+                   
+            }         
+     
+        </script>            
+                      
+        <a href="New_customer.html">Please Sign Up Now and Enjoy!</a>
+    </body>
+</html>
