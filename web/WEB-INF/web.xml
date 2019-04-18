@@ -1,49 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <context-param>
+        <param-name>javax.faces.PROJECT_STAGE</param-name>
+        <param-value>Development</param-value>
+    </context-param>
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>LoginServlet</servlet-class>
     </servlet>
-    
     <servlet>
         <servlet-name>NewCustomer</servlet-name>
         <servlet-class>NewCustomer</servlet-class>
     </servlet>
-    
     <servlet>
         <servlet-name>Transaction</servlet-name>
         <servlet-class>Transaction</servlet-class>
     </servlet>
-    
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>UserLog</servlet-name>
+        <servlet-class>UserLog</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
     </servlet-mapping>
-    
     <servlet-mapping>
         <servlet-name>NewCustomer</servlet-name>
         <url-pattern>/NewCustomer</url-pattern>
     </servlet-mapping>
-    
     <servlet-mapping>
         <servlet-name>Transaction</servlet-name>
         <url-pattern>/Transaction</url-pattern>
-    </servlet-mapping>    
-    
-    <error-page>    
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>faces/index.xhtml</welcome-file>
+    </welcome-file-list>
+    <error-page>
         <error-code>404</error-code>
-         <location>/Error_404.jsp</location>
+        <location>/Error_404.jsp</location>
     </error-page>
-    
     <error-page>
         <exception-type>java.lang.Exception</exception-type>
         <location>/errorpages/Error_java.jsp</location>
     </error-page>
-     
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/faces/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserLog</servlet-name>
+        <url-pattern>/UserLog</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
-    
 </web-app>

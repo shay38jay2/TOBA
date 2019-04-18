@@ -13,5 +13,8 @@
     </head>
     <body>
         <h1>Error For All Java</h1>
+        <p>Sorry, Java has thrown an exception.</p>
+        <p>To continue, click the Back button.</p>
+        
     </body>
 </html>

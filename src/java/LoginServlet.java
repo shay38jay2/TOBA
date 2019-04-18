@@ -17,7 +17,11 @@ import javax.servlet.http.HttpServletResponse;
 public class LoginServlet extends HttpServlet {
 
     private Object password;        
+    private Object username;
+    private String url;
     
+    
+    @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException { 
         try{
@@ -31,6 +35,15 @@ public class LoginServlet extends HttpServlet {
             
             cust = Transaction.login(cust);
             
+            if(username.equals("jsmith@toba.com") && password.equals("letmein")){
+                String url = "TOBA/Login_failure.html";
+            }
+            else{
+                url = "TOBA/Account_activity.html";
+            }
+                
+        
+        
             //If customer Login is valid, redirect to Success.html page.
             if(cust.isValid())  
             {

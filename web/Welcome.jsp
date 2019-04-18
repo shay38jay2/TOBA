@@ -1,16 +1,19 @@
-<!DOCTYPE html>
+<%-- 
+    Document   : Welcome
+    Created on : Apr 16, 2019, 8:29:13 PM
+    Author     : Shay
+--%>
 
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
-    <head> 
-       <title> Account Created - Successfully</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="color.css" rel="stylesheet">
-   </head>
-   <body>
-   
-  
-   
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Titan Bank Home</title>
+    </head>
+    <body>
+        
+        
        <nav>
             <a href="index.html">Home</a> &nbsp;
             <a href="Login.html">Sign Up Here</a> &nbsp;
@@ -20,14 +23,13 @@
             <a href="Transaction.html">Post Transaction</a>
             
         </nav>
-   
-       
-       <table align="center" style="border:2px solid #FF0099;">
+        
+        <table align="center" style="border:2px solid #FF0099;">
            <% 
-           if(custSession.getAttribute("userName")!=null && custSession.getAttribute("userName")!=")
+           if(session.getAttribute("userName")!=null && session.getAttribute("userName")!= "")
            {
-           String user = sess.getAttribute("userName").toString();   
-           
+           String user = session.getAttribute("userName").toString();   
+           %>
            {
            else{
                 System.out.print("Not Logged In");                
@@ -40,9 +42,5 @@
            
        </table>
     
-        <h1>Account Activity</h1>
-            
-   </body>       
-    
+    </body>
 </html>
-

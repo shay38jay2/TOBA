@@ -14,6 +14,7 @@ public class NewCustomer{
         public boolean valid1;
         
         //Return for each entry variable.
+        
         public String getFirstName(){
             return firstName1;
         }
